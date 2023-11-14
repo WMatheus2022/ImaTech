@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function enviar(formulario){
+            // capturando valores de inputs
+            let nome = formulario[0].value;
+            let idade = parseInt(formulario[1].value);
+
+            // validacao
+            if(nome === ""){
+                alert("digite seu nome");
+                formulario[0].focus();
+            } else if(isNaN(idade)){
+                alert("digite sua idade");
+                formulario[1].focus();
+            } else{
+                alert(`seu nome ${nome} e sua idade ${idade}`);
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" onsubmit="enviar(this)">
+        <input type="text" placeholder="informe seu nome">
+        <input type="number" placeholder="informe sua idade">
+        <input type="button" value="enviar">
+    </form>
+</body>
+
+</html>

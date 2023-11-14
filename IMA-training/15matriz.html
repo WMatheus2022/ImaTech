@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // matrizes (arrays multi-dimensionais)
+        let contatos = [
+            ["ralf", 33, "blumenau"],
+            ["alan", 20, "curitiba"],
+            ["jonas", 15, "santos"],
+        ];
+
+        //laços
+        for (let linha = 0; linha <= contatos.length; linhas++) {
+            //document.write(contatos[linha][coluna]);
+            for (coluna = 0; coluna < contatos[0].length; coluna++) {
+                document.write(contatos[linha][coluna] + "<br>");
+            }
+            document.write("<br>");
+        }
+
+        //impreme a mensagem no navegador
+        //document.write(contatos);// posso especificar oq vai aparecer usando ex: contatos[1] e [0]
+
+        //opcao de imprecao no console do navegador
+        //console.log(contatos);
+
+        //imprime uma tabela
+        //console.table(contatos);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

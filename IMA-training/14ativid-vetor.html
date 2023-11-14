@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //vetor
+        let produtos = [];
+
+        // menu
+        let menu = "1º cadastrar produtos\n";
+        menu += "2º listar produtos\n";
+        menu += "3º remover produtos\n";
+        menu += "4º finalizar";
+
+        //opção
+        let opcao = 0;
+
+        //laço de repetição
+        do {
+            //obter a opcao
+            opcao = parseInt(prompt(menu));
+
+            //ação
+            switch (opcao) {
+                case 1:
+                    produtos.push(prompt("informe o produto que deseja cadastrar"));
+                    alert("cadastrar");
+                    break;
+
+                case 2:
+                    let lista = "********Produtos Cadastrados********\n\n";
+                    for (let i = 0; i < produtos.length; i++) {
+                        lista = produtos[i] + "\n";
+                    }
+                    alert(lista);
+                    break;
+
+                case 3:
+                    let indiceRemocao = -1;
+
+                    let nomeProdutoRemocao = prompt("informe o nome do produto que deseja remover");
+                    for (let i = 0; i < produtos.length; i++) {
+                        if (nomeProdutoRemocao == produtos[i]) {
+                            indiceRemocao = i;
+                        }
+                    }
+
+                    if (indiceRemocao != -1) {
+                        produtos.splice(indiceRemocao, 1);
+                        alert("remocao concluida com sucesso!");
+                    }
+                    //alert("remover");
+                    break;
+
+                case 4:
+                    alert("sistema falhou");
+                    break;
+
+                default:
+                    alert("finalizar");
+
+            }
+        } while (opcao != 4);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

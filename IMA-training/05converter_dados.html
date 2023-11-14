@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nota1 = prompt("Informe o valor");
+        let nota2 = prompt("Informe o valor");
+
+        document.write(nota1+nota2);
+
+        let media = (nota1+nota2) / 2;
+
+        //if não precisa colocar {} quando o retorno so tiver uma linha
+        if(media >= 7)
+        document.write("Aprovado!");
+        else
+        document.write("reprovado!");
+
+        //operador ternario 
+        document.write(media >= 7 ? "Aprovado" : "reprovado");
+
+        //document.write(media >= 7 ? "Aprovado" : media == 5 ? "Recuperacao");-> dando error
+
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

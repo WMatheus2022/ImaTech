@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Nomes
+        let nomes = ['Alice', 'Bruna', 'Carlos', 'john'];
+
+        //Map
+        nomes.map(obj => document.write(obj+'<hr>'));
+
+        //Filtragem 
+        let nomesContendoA = nomes.filter(nome => {
+            //return nome.toLocaleLowerCase().indexOf('a') != -1;
+            return nome.toLocaleLowerCase().substring(0,1) == 'a'; 
+        });
+
+        document.write(nomesContendoA+'<hr>');
+
+        //ForEach
+        nomes.forEach((nome, linha) => {
+            document.write(linha+ ' ' + nome + '<hr>');
+        });
+    </script>
+</head>
+<body>
+    <hr>
+</body>
+</html>
