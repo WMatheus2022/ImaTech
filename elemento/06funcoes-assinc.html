@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes assincronas</title>
+
+    <script>
+        function mensagem01(){
+            return new Promise((retorno) => {
+                setTimeout(() => {
+                    retorno('mensagem 1');
+                }, 1000)
+            });
+        }
+
+        function mensagem02(){
+            return 'mensagem 2';
+        }
+
+        async function execMensagem() {
+            let r1 = await mensagem01();
+            let r2 = mensagem02();
+
+            console.log(r1);
+            console.log(r2);
+        }
+
+        execMensagem();
+    </script>
+</head>
+
+<body>
+    <ul></ul>
+    <div></div>
+</body>
+
+</html>
