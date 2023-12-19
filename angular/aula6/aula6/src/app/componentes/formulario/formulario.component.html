@@ -1,0 +1,8 @@
+<p>formulario works!</p>
+
+<form [formGroup]="formulario" (submit)="cadastrar()">
+    <input type="text" placeholder="Nome" formControlName="nome" class="form">
+    <input type="number" placeholder="1ª nota" formControlName="nota1" class="form">
+    <input type="number" placeholder="2ª nota" formControlName="nota2" class="form">
+    <input type="submit" value="Cadastrar" class="btn btn-primary">
+</form>

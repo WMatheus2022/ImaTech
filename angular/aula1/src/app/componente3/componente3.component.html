@@ -1,0 +1,22 @@
+<!-- Condicional -->
+@if (media >=7) {
+<p>Aprovado(a)</p>
+}@else if (media >= 5) {
+<p>Em exame</p>
+}@else {
+<p>Reprovado(a)</p>
+}
+
+@switch(linguagem) {
+    @case ('Java') {<p>liguagem orientada a objetos</p>}
+    @case ('Javascript') {<p>liguagem de interação</p>}
+    @case ('html') {<p>liguagem de marcação</p>}
+    @case ('python') {<p>liguagem orientada a objetos</p>}
+    @default {<p>liguagem não encontrada</p>}
+}
+
+@for (nome of nomes; track $index) {
+    <p>{{$index}} - {{nome}}</p>
+}@empty {
+    <p>não encontrado</p>
+}

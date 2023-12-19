@@ -1,0 +1,28 @@
+<!--
+    PROPERTY BIND
+    () -> HTML chama uma funçao/variavel no arquivo TS
+    [] -> TS e envia para o arquivo HTML
+    [()] -> 
+-->
+
+<!--IF-->
+<button (click)="funcaoExibirTexto()">clique aqui</button>
+<p *ngif="exibirTexto">aprendendo a trabalhar com ngIf</p>
+
+<!--Template-->
+<ng-template [ngIf]="exibirTexto">
+    <p>Texto dentro do template...</p>
+</ng-template>
+
+<!--FOR-->
+<ul *ngFor="let nome of nomes; index as i">
+    <li>{{nome}}</li>
+</ul>
+
+<!--SWITCH-->
+<ul [ngSwitch]="Linguagem">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
